@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: catalogue
-        image: j123456246/catalogue:v1
+        image: 123456246/catalogue:v1
         imagePullPolicy: Always
         envFrom:
         - configMapRef:
