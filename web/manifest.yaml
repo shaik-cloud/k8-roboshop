@@ -92,17 +92,17 @@ data:
           proxy_pass http://user:8080/;
         }
 
-        # location /api/cart/ {
-        #   proxy_pass http://cart:8080/;
-        # }
+        location /api/cart/ {
+          proxy_pass http://cart:8080/;
+        }
 
-        # location /api/shipping/ {
-        #   proxy_pass http://shipping:8080/;
-        # }
+        location /api/shipping/ {
+          proxy_pass http://shipping:8080/;
+        }
 
-        # location /api/payment/ {
-        #   proxy_pass http://payment:8080/;
-        # }
+        location /api/payment/ {
+          proxy_pass http://payment:8080/;
+        }
 
 
     }
@@ -135,7 +135,7 @@ spec:
     spec:
       containers:
       - name: web
-        image:  123456246/web:v1
+        image: joindevops/web:v1
         imagePullPolicy: Always
         volumeMounts:
         - name: nginx-conf
